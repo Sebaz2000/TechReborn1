@@ -71,8 +71,8 @@ public class QuantumSuitItem extends TREnergyArmourItem implements ArmorBlockEnt
 		}
 
 		if (equipmentSlot == this.getSlotType() && getStoredEnergy(stack) > 0) {
-			attributes.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(MODIFIERS[getSlotType().getEntitySlotId()], "Armor modifier", 20, EntityAttributeModifier.Operation.ADDITION));
-			attributes.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(MODIFIERS[getSlotType().getEntitySlotId()], "Knockback modifier", 2, EntityAttributeModifier.Operation.ADDITION));
+			attributes.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(MODIFIERS[getSlotType().getEntitySlotId()], "Armor modifier", 10, EntityAttributeModifier.Operation.ADDITION));
+			attributes.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(MODIFIERS[getSlotType().getEntitySlotId()], "Knockback modifier", 0.5, EntityAttributeModifier.Operation.ADDITION));
 		}
 
 		return ImmutableMultimap.copyOf(attributes);
